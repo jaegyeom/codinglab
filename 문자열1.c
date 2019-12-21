@@ -1,4 +1,3 @@
-﻿#define _USE_MATH_DEFINES
 #include<stdio.h>
 
 int func(char* str1, char* str2)
@@ -15,11 +14,13 @@ int main()
 {
 	char str1[10];
 	char str2[10];
+	memset(str1, 0, sizeof(str1));
+	memset(str2, 0, sizeof(str1));
 	int flag = 0;
 	scanf("%s", str1);
 	scanf("%s", str2);
 	for (int i = 0; i < 10; i++) {
-		if(str1[i]!=str2[i]){
+		if (str1[i] != str2[i]) {
 			flag = 1;
 			break;
 		}
